@@ -16,9 +16,10 @@ function Nav() {
       description: "List of employers with contact Information",
     },
   ];
-        //onClick return statement//
+
+  //onClick return statement//
   function categorySelected(name) {
-    console.log(`${name} clicked`)
+    console.log(`${name} clicked`);
   }
 
   return (
@@ -44,9 +45,8 @@ function Nav() {
 
             {categories.map((category) => (
               <li className="mx-2" key={category.name}>
-                 <span onClick={categorySelected} >
-      {category.name}
-    </span>
+                <span onClick={()=> categorySelected(category.name)}>{category.name}
+                </span>
               </li>
             ))}
           </ul>
